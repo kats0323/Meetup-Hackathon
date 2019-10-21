@@ -1,16 +1,17 @@
 const express = require("express");
-
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
+const cookieParser = require("cookie-parser");
+const session = require("express-session");
 const passport = require("passport");
 
 require("./database/models/user_model");
 require("./config/passport")(passport);
 
 const auth = require("./routes/auth");
-const index = require("./routes/index");
+const meetup = require("./routes/meetup");
 
 
 
@@ -33,8 +34,19 @@ mongoose
   .catch(err => console.log(err));
 
 
+app.use(methodOverride("_method"));
+
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
+
+app.use(cookieParser());
+app.use(session({
+        secret: "superSecretPassword",
+        resave: false,
+        saveUninitialized: false
+    })
+);
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -44,8 +56,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
+
+
 app.use(require("./routes/auth"));
-app.use(require("./routes/index"));
+app.use(require("./routes/meetup"));
+
 
 
 

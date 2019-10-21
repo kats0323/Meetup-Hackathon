@@ -4,11 +4,14 @@ const passport = require("passport")
 const MeetupController = require("../controllers/meetup_controller")
 
 
+
 router.get("/", MeetupController.index);
-
-
 router.get("/dashboard", (req, res) => res.send("Dashboard"));
-
+router.get("/meetups/new", MeetupController.make);
+router.post("/meetups", MeetupController.create);
+router.get("/meetups/:id", MeetupController.show);
 
 
 module.exports = router;
+
+
