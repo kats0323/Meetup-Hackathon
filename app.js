@@ -39,11 +39,11 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.use(require("./routes/auth"));
 app.use(require("./routes/index"));
+app.use(require("./routes/auth"));
 
 
-app.use(express.static("public"));
+app.use(express.static(__dirname +"/public"));
 
  
 app.listen(port, ()=> console.log(`Server is running on port ${port}`));
