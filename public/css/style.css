@@ -4,7 +4,7 @@
     width: 100vw;
 }   
 .FrontCover img{
-    width: 100vw;
+    width: 100%;
     height: 45vh;
     opacity: 0.8;
 }
@@ -12,6 +12,7 @@
 
 .bg-custom{
     background-image: linear-gradient(-90deg, #1592CA, #25ACDF, #34BFF0);
+    width: 100vw;
 }
 
 .centered {
