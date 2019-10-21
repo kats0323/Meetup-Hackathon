@@ -1,15 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-custom">
   <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">About</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="/google">Sign up</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Login</a>
       </li>
     </ul>
   </div>
@@ -19,12 +23,13 @@
     <img src="/images/Beach.png">
     <div class="title">
         <div>The Real world is calling</div>
+        <p>Join a local group to meet people, try something new, or do more of what you love.</p>
     </div>
-    <div class="centered border border-info mt-1"><p>Join Meetup</p></div>
+    <a href=""><div class="centered border border-info mt-1"><p>Join Meetup</p></div></a>
 </div>
 <div>
     <div class="container mt-3">
-        <ul class="list-group list-group-horizontal">
+        <ul class="list-group list-group-horizontal d-flex justify-content-between">
             <li class="list-group-item">Join Movement</li>
             <li class="list-group-item">Learn to cook</li>
             <li class="list-group-item">Train for Marathon</li>
@@ -37,10 +42,24 @@
     <hr>
 </div>
 
-
-
-<footer class="footer">
-    <div class="foot">
-
+<div class="container">
+    <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
-</footer>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Cras justo odio</li>
+        <li class="list-group-item">Dapibus ac facilisis in</li>
+        <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+    </div>
+    </div>
+
+</div>
+
+
