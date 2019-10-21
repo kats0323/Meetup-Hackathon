@@ -12,7 +12,7 @@ router.get('/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     // Successful authentication, redirect home.
-    res.redirect('/dashboard');
+    res.redirect('/');
 });
 
 // to verify google auth was Successful
