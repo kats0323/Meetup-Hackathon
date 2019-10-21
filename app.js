@@ -47,7 +47,9 @@ app.use(passport.session());
 app.use(require("./routes/auth"));
 app.use(require("./routes/index"));
 
-app.use(express.static("public"));
+
+
+app.use(express.static(__dirname +"/public"));
 
 
 
