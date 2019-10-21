@@ -1,11 +1,47 @@
+/* Welcome page */
 .FrontCover{
     width: 100vw;
 }
 .FrontCover img{
     width: 100vw;
-    height: 43vh;
+    height: 45vh;
+    opacity: 0.8;
 }
 
 .footer{
     margin-top: 30vh;
 }
+
+.bg-custom{
+    background-image: linear-gradient(-90deg, #1592CA, #25ACDF, #34BFF0);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 360px;
+    height: 45px;
+    font-size: 1.2em;
+    text-align: center; 
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(-90deg, #1592CA, #25ACDF, #34BFF0);
+    color: white;
+}
+.centered p{
+    padding-top: 5px;
+}
+
+.title{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px #1592CA;
+
+}
+
+
