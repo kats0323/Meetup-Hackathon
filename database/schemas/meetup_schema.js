@@ -8,14 +8,27 @@ const MeetupSchema = new Schema({
         required: true
     },
     description: {
-        type: Date,
+        type: String,
         required: true
     },
-    // refereing to another document : normalisation technique
-    accept: {
-        type: Schema.Types.ObjectId,
-        ref: "user"
+    date: {
+        type: Date,
+        required: true 
+    },
+    startTime: {
+        type: Date,
+        required: true 
+    },
+    endTime: {
+        type: Date,
+        required: true 
     }
+
+    
+    // accept: {
+    //     type: Schema.Types.ObjectId,
+    //     ref: "user"
+    // }
 });
 
 module.exports = MeetupSchema;
