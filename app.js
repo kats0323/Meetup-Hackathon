@@ -39,6 +39,11 @@ app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+//passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 app.use(require("./routes/auth"));
 app.use(require("./routes/index"));
 

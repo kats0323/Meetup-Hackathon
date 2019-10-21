@@ -8,11 +8,11 @@ router.get('/google', passport.authenticate('google', {scope: ['profile','email'
 
 // callback from passport-google-oauth20 github page:
 // note : get rid of /auth , must be only /google/callback as we are in auth file
-router.get('/google/callback',
+router.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/dashboard');
 });
 
 // to verify google auth was Successful
