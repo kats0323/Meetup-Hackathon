@@ -7,6 +7,8 @@ const MeetupController = require("../controllers/meetup_controller")
 router.get("/", MeetupController.index);
 
 
+router.get("/dashboard", (req, res) => res.send("Dashboard"));
+
 
 
 module.exports = router;
