@@ -1,0 +1,26 @@
+<h1>New Meetups</h1>
+
+<form method="post" action="/meetups">
+    <div>
+        <label>Title</label>
+    
+        <input type="text" name="title" />
+    </div>
+    <div>
+        <label>Published</label>
+    
+        <input type="date" name="description">
+    </div>
+    <div>
+        <select name="user">
+       {{#each users}}
+
+        <option value="{{this._id}}">{{this.name}}</option>
+       {{/each}}
+       </select>
+    </div>
+    
+    <div>
+        <input type="submit" value="Submit Form" />
+    </div>
+</form>
