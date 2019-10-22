@@ -27,6 +27,10 @@ const MeetupSchema = new Schema({
         type: String,
         default: "public" 
       },
+    image: {
+        type:String,
+        required: true
+    },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users"

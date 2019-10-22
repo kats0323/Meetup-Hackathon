@@ -7,6 +7,7 @@ const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const passport = require("passport");
 
+
 require("./database/models/user_model");
 require("./config/passport")(passport);
 
@@ -48,13 +49,13 @@ app.use(session({
     })
 );
 
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 
 

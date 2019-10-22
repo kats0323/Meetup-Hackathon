@@ -3,9 +3,7 @@ const UserModel = require("../database/models/user_model");
 const MeetupModel = require("../database/models/meetup_model");
 
 
-const index = (req, res) => {
-    res.render("index/welcome");
-}
+
 const about = (req, res) => {
     res.render("index/about");
 }
@@ -21,9 +19,11 @@ const make = async(req, res) => {
 
 const create = async (req, res) => {
     //logic for creating a resource
-    let { title, description, date,startTime ,endTime,status} = req.body;
-    let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status})
+    let { title, description, date,startTime ,endTime,status, image} = req.body;
+    let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status, image})
     .catch(err => res.status(500).send(err));
+    console.log(image)
+
     res.redirect(`/meetups/show/${meetup._id}`);    
 }
 
@@ -39,6 +39,10 @@ const allshow =  async (req, res) => {
   res.render("meetups/index", { meetups });
 };
 
+const index =  async (req, res) => {
+  let meetups = await MeetupModel.find();
+  res.render("index/welcome", { meetups });
+};
 
 
 module.exports = {
