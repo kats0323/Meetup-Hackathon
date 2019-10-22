@@ -24,6 +24,7 @@ const meetup = require("./routes/meetup");
 const keys = require("./config/keys");
 const app = express();
 const port = 3000;
+const path = require("path")
 
 
 mongoose.Promise = global.Promise;
@@ -69,7 +70,8 @@ app.use(require("./routes/meetup"));
 
 
 
-app.use(express.static(__dirname +"/public"));
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname,"public")));
 
 
 

@@ -35,8 +35,6 @@ const MeetupSchema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Users"
       }
-
-    
     
 });
 
