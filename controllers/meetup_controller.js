@@ -17,12 +17,16 @@ const make = async(req, res) => {
 }
 
 
+
+
 const create = async (req, res) => {
     //logic for creating a resource
     let { title, description, date,startTime ,endTime,status} = req.body;
-    let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status})
+    let image = req.file.filename
+    let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status,image})
     .catch(err => res.status(500).send(err));
     res.redirect(`/meetups/show/${meetup._id}`)
+    
     
 
 }
