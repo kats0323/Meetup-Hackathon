@@ -16,11 +16,11 @@ const MeetupSchema = new Schema({
         required: true 
     },
     startTime: {
-        type: Date,
+        type: String,
         required: true 
     },
     endTime: {
-        type: Date,
+        type: String,
         required: true 
     },
     status: {
@@ -29,7 +29,7 @@ const MeetupSchema = new Schema({
       },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user"
+        ref: "users"
       }
 
     
