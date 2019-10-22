@@ -17,12 +17,17 @@ const make = async(req, res) => {
 }
 
 
+
+
 const create = async (req, res) => {
     //logic for creating a resource
-    let { title, description, date,startTime ,endTime,status, image} = req.body;
-    let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status, image})
+    let { title, description, date,startTime ,endTime,status} = req.body;
+    let image = req.file.filename
+    let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status,image})
     .catch(err => res.status(500).send(err));
-    console.log(image)
+    res.redirect(`/meetups/show/${meetup._id}`)
+    
+    
 
     res.redirect(`/meetups/show/${meetup._id}`);    
 }
@@ -34,6 +39,7 @@ const show = async (req, res) => {
     res.render("meetups/show", {meetup});
 }
 
+
 const allshow =  async (req, res) => {
   let meetups = await MeetupModel.find();
   res.render("meetups/index", { meetups });
@@ -44,6 +50,14 @@ const index =  async (req, res) => {
   res.render("index/welcome", { meetups });
 };
 
+const allshowUser =  async (req, res) => {
+  let users = await UserModel.find();
+  console.log(users)
+  res.render("meetups/users", { users });
+};
+
+
+
 
 module.exports = {
     index,
@@ -51,6 +65,6 @@ module.exports = {
     make,
     create,
     show,
-    allshow
-   
-}
+    allshow,
+    allshowUser
+   }

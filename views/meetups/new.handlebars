@@ -2,7 +2,7 @@
     <div class="mt-5 rounded-lg container border-custom">
         <h1>Create a new meetups</h1>
         <div class="mx-auto">
-            <form method="post" action="/meetups" enctype="multipart/form-data">
+            <form method="POST" action="/meetups"  enctype="multipart/form-data">
                 <div>
                     <br>   
                     <div class="input-group">
@@ -42,9 +42,11 @@
                             <input type="time" name="endTime">
                         </div>
                     </li>
+
+                    <label>Images</label> 
                     <li class="list-group-item">
                         <div>
-                            <input type="file" name="image">
+                           <input type="file" name="image" />
                         </div>
                     </li>
             
