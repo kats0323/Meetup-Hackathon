@@ -16,19 +16,24 @@ const MeetupSchema = new Schema({
         required: true 
     },
     startTime: {
-        type: Date,
+        type: String,
         required: true 
     },
     endTime: {
-        type: Date,
+        type: String,
         required: true 
-    }
+    },
+    status: {
+        type: String,
+        default: "public" 
+      },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "users"
+      }
 
     
-    // accept: {
-    //     type: Schema.Types.ObjectId,
-    //     ref: "user"
-    // }
+    
 });
 
 module.exports = MeetupSchema;
