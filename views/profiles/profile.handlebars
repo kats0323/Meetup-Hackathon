@@ -9,5 +9,9 @@
 
 <h3>{{user.email}}</h3>
 </br>
- <img src="{{user.image}}"/>
+{{#if (user.image)}}
+ <img src="{{user.image}}" alt=""/>
+ {{else}}
+ <img src="../../images/avatar.png" alt=""/>
+ {{/if}}
 </div>
