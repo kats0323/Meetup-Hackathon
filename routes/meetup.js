@@ -11,7 +11,10 @@ router.get("/dashboard", (req, res) => res.send("Dashboard"));
 router.get("/meetups/new", MeetupController.make);
 router.post("/meetups", MeetupController.create);
 router.get("/meetups/show/:id", MeetupController.show);
+<<<<<<< HEAD
 router.get("/meetups/all", MeetupController.allshow);
+=======
+>>>>>>> 3cc088016eab35b54e5262ceb9f40da066763450
 
 
 module.exports = router;

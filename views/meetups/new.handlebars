@@ -1,11 +1,57 @@
-<h1>New Meetups</h1>
-
-<form method="post" action="/meetups">
-    <div>
-        <label>Title</label>
-        <br>   
-        <input type="text" name="title" />
+<div class="form-background">
+    <div class="mt-5 rounded-lg container border-custom">
+        <h1>Create a new meetups</h1>
+        <div class="mx-auto">
+            <form method="post" action="/meetups">
+                <div>
+                    <br>   
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Title</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea " name="description  name="title""></textarea>
+                    </div>
+                    
+                    
+                </div>
+                <div>
+                    <br>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Description</span>
+                        </div>
+                        <textarea class="form-control" aria-label="With textarea " name="description"></textarea>
+                    </div>
+                    
+                </div>
+                <ul class="mt-5 list-group list-group-horizontal">
+                    <label>Date</label>
+                    <li class="list-group-item">
+                        <div>
+                            <input type="date" name="date">
+                        </div>
+                    </li>
+                    <label>Start Time</label>   
+                    <li class="list-group-item">
+                        <div>
+                            <input type="time" name="startTime">
+                        </div>
+                    </li>
+                    <label>End Time</label> 
+                    <li class="list-group-item">
+                        <div>
+                            <input type="time" name="endTime">
+                        </div>
+                    </li>
+            
+                </ul>
+                    <div class="mt-5">
+                        <input class=" mt-5 mr-5 btn btn-custom float-sm-right" type="submit" value="Submit Form" />
+                    </div>
+            </form>
+        </div>
     </div>
+<<<<<<< HEAD
     <div>
         <label>Description</label>
         <br>        
@@ -35,3 +81,6 @@
         <input type="submit" value="Submit Form" />
     </div>
 </form>
+=======
+</div>
+>>>>>>> 3cc088016eab35b54e5262ceb9f40da066763450
