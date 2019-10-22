@@ -1,5 +1,5 @@
 const login = (req, res) => {
-    res.redirect('/dashboard');
+    res.redirect('/profiles');
 };
 
 const verify = (req, res) => {

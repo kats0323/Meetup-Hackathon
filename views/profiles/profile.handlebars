@@ -1,0 +1,17 @@
+<div class="container">
+<h1> Profile Page</h1>
+</br>
+<h2>Name</h2>
+
+<h3>{{user.firstName}} {{user.lastName}}</h3>
+</br>
+<h2>Email</h2>
+
+<h3>{{user.email}}</h3>
+</br>
+{{#if (user.image)}}
+ <img src="{{user.image}}" alt=""/>
+ {{else}}
+ <img src="../../images/avatar.png" alt=""/>
+ {{/if}}
+</div>
