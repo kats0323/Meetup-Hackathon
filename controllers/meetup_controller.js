@@ -29,6 +29,7 @@ const create = async (req, res) => {
     
     
 
+    res.redirect(`/meetups/show/${meetup._id}`);    
 }
 
 const show = async (req, res) => {
@@ -38,16 +39,16 @@ const show = async (req, res) => {
     res.render("meetups/show", {meetup});
 }
 
-const index =  async (req, res) => {
-  let meetups = await MeetupModel.find();
-  res.render("index/welcome", { meetups });
-};
 
 const allshow =  async (req, res) => {
   let meetups = await MeetupModel.find();
   res.render("meetups/index", { meetups });
 };
 
+const index =  async (req, res) => {
+  let meetups = await MeetupModel.find();
+  res.render("index/welcome", { meetups });
+};
 
 const allshowUser =  async (req, res) => {
   let users = await UserModel.find();

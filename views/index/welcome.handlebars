@@ -1,6 +1,6 @@
 
 <div class="FrontCover mt-5"></div>
-    <img src="../images/Beach.png">
+    <img src="../images/Beach.png" style="width:100vw" height="500px">
     <div class="title">
         <div>The Real world is calling</div>
         <p>Join a local group to meet people, try something new, or do more of what you love.</p>
@@ -11,52 +11,33 @@
 <div>
     <div class="container mt-3">
         <ul class="list-group list-group-horizontal d-flex justify-content-between">
-            <li class="list-group-item">Join Movement</li>
-            <li class="list-group-item">Learn to cook</li>
-            <li class="list-group-item">Train for Marathon</li>
-            <li class="list-group-item">Build Mobile app</li>
-            <li class="list-group-item">Hike Mountain</li>
-            <li class="list-group-item">Practice languages</li>
-            <li class="list-group-item">Learn Judo</li>
+            <li class="list-group-item border">Join Movement</li>
+            <li class="list-group-item border">Learn to cook</li>
+            <li class="list-group-item border">Train for Marathon</li>
+            <li class="list-group-item border">Build Mobile app</li>
+            <li class="list-group-item border">Hike Mountain</li>
+            <li class="list-group-item border">Practice languages</li>
+            <li class="list-group-item border">Learn Judo</li>
         </ul>
     </div>
     <hr>
 </div>
 
-
 <div class="container">
-    <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-    </div>
-    </div>
-
-</div>
-
-
-
-{{#each meetups}}
-<div class="container">
-    </br>
-    <h1 class="text-center text-success"><span class="font-weight-bold text-center">{{ this.title }}</span></h1>
-    <div class="contents">
-    <p> {{ this.description }}</p>
-     <p> {{ this.date }}</p>
-      <p> {{ this.startTime }}</p>
-       <p> {{ this.endTime }}</p>
-
+    <div class="card-group">    
+        {{#each meetups}}
+        <div class="card">
+            <img src="../../upload/{{this.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{ this.description }}</p></div>
+            <div class="card-footer">
+            <small class="text-muted">Date {{ this.date }}</small>
+            <small class="text-muted">Start Time {{ this.startTime }}</small>
+            <small class="text-muted">End Time {{ this.endTime }}</small>
+            </div>
+        </div>
+        {{/each}}
     </div>
 </div>
-
-{{/each}}
+<hr>

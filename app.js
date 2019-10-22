@@ -54,13 +54,13 @@ app.use(session({
     })
 );
 
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 //passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
-
 
 
 

@@ -11,8 +11,7 @@
                         </div>
                         <input type="text" name="title">
                     </div>
-                    
-                    
+                     
                 </div>
                 <div>
                     <br>
@@ -25,28 +24,41 @@
                     
                 </div>
                 <ul class="mt-5 list-group list-group-horizontal">
-                    <label>Date</label>
                     <li class="list-group-item">
-                        <div>
-                            <input type="date" name="date">
+                        <div class="input-group">
+                            <label>Date</label>
+                            <input type="date"  name="date" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                            {{!-- <input type="date" name="date"> --}}
                         </div>
                     </li>
-                    <label>Start Time</label>   
-                    <li class="list-group-item">
+                        <label>Start Time</label>   
+
+                    <li class="list-group-item ">
                         <div>
-                            <input type="time" name="startTime">
+                            <input type="time"  name="startTime" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                            {{!-- <input type="time" name="startTime"> --}}
                         </div>
                     </li>
-                    <label>End Time</label> 
+                        <label>End Time</label> 
+
                     <li class="list-group-item">
                         <div>
-                            <input type="time" name="endTime">
+
+                            <input type="time"  name="endTime" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                            {{!-- <input type="time" name="endTime"> --}}
                         </div>
                     </li>
 
                     <label>Images</label> 
+
                     <li class="list-group-item">
                         <div>
+
+                            {{!-- <input type="file"  name="image" class="form-control" aria-label="Text input with segmented dropdown button"> --}}
+
                            <input type="file" name="image" />
                         </div>
                     </li>
