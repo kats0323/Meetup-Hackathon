@@ -6,6 +6,9 @@ const MeetupModel = require("../database/models/meetup_model");
 const index = (req, res) => {
     res.render("index/welcome");
 }
+const about = (req, res) => {
+    res.render("index/about");
+}
 
 const make = async(req, res) => {
     
@@ -35,6 +38,7 @@ const show = async (req, res) => {
 
 module.exports = {
     index,
+    about,
     make,
     create,
     show
