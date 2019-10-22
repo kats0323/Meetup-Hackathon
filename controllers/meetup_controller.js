@@ -24,7 +24,7 @@ const create = async (req, res) => {
     let { title, description, date,startTime ,endTime,status} = req.body;
     let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status})
     .catch(err => res.status(500).send(err));
-    res.redirect(`/meetups/${meetup._id}`);
+    res.redirect(`/meetups/show/${meetup._id}`);
 
 }
 
