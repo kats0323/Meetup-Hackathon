@@ -3,9 +3,7 @@ const UserModel = require("../database/models/user_model");
 const MeetupModel = require("../database/models/meetup_model");
 
 
-const index = (req, res) => {
-    res.render("index/welcome");
-}
+
 const about = (req, res) => {
     res.render("index/about");
 }
@@ -36,10 +34,23 @@ const show = async (req, res) => {
     res.render("meetups/show", {meetup});
 }
 
+const index =  async (req, res) => {
+  let meetups = await MeetupModel.find();
+  res.render("index/welcome", { meetups });
+};
+
 const allshow =  async (req, res) => {
   let meetups = await MeetupModel.find();
   res.render("meetups/index", { meetups });
 };
+
+
+const allshowUser =  async (req, res) => {
+  let users = await UserModel.find();
+  console.log(users)
+  res.render("meetups/users", { users });
+};
+
 
 
 
@@ -49,6 +60,6 @@ module.exports = {
     make,
     create,
     show,
-    allshow
-   
-}
+    allshow,
+    allshowUser
+   }

@@ -8,6 +8,8 @@ const session = require("express-session");
 const passport = require("passport");
 
 require("./database/models/user_model");
+require("./database/models/meetup_model");
+
 require("./config/passport")(passport);
 
 const auth = require("./routes/auth");

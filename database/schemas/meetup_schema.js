@@ -29,7 +29,7 @@ const MeetupSchema = new Schema({
       },
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "users"
+        ref: "Users"
       }
 
     
