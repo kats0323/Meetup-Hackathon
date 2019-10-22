@@ -54,6 +54,7 @@ app.use(session({
     })
 );
 
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
@@ -63,9 +64,9 @@ app.use(passport.session());
 
 
 
-
 app.use(require("./routes/auth"));
 app.use(require("./routes/meetup"));
+app.use(require("./routes/profile"));
 
 
 
