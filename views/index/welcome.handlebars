@@ -27,7 +27,7 @@
     <div class="card-group">    
         {{#each meetups}}
         <div class="card">
-            <img src="../../upload/{{this.image}}" class="card-img-top" alt="...">
+            <a href="/meetups/show/{{this._id}}"><img src="../../upload/{{this.image}}" class="card-img-top" alt="..."></a>
             <div class="card-body">
             <h5 class="card-title">{{this.title}}</h5>
             <p class="card-text">{{ this.description }}</p></div>

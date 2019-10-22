@@ -1,12 +1,53 @@
-<h1> Meetup </h1>
+<style>
+    body{
+        background-color: rgba(242, 255, 255, 0.774);
+    }
+</style>
+<div class="meet-background container-fluid">
+    <div class="container meet-pad">
+        <div class="row">
+            <div class="col-sm">
+                <img src="../../upload/{{ meetup.image }}" class="img-fluid" alt="...">
+            </div>
+            <div class="col-sm meetup-about">
+                <h2>{{meetup.title}}</h2>
+                <p>Date:{{meetup.date}}</p>
+                <p>StartTime:{{meetup.startTime}}</p>
+                <p>EndTime:{{meetup.endTime}}</p>
+                <a href="/users/meetup.user._id">{{meetup.user.name}}</a>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <div class="container mt-3">
+                <ul class="list-group list-group-horizontal d-flex justify-content-between">
+                    <li class="list-group-item border">Join Movement</li>
+                    <li class="list-group-item border">Learn to cook</li>
+                    <li class="list-group-item border">Train for Marathon</li>
+                    <li class="list-group-item border">Build Mobile app</li>
+                    <li class="list-group-item border">Hike Mountain</li>
+                    <li class="list-group-item border">Practice languages</li>
+                    <li class="list-group-item border">Learn Judo</li>
+                </ul>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
 
 
-<p>Title: {{meetup.title}}</p>
-<p>Description:{{meetup.description}}</p>
-<p>Date:{{meetup.date}}</p>
-<p>StartTime:{{meetup.startTime}}</p>
-<p>EndTime:{{meetup.endTime}}</p>
- <img src="../../upload/{{ meetup.image }}" alt="...">
-<a href="/users/meetup.user._id">{{meetup.user.name}}</a>
+<div class="container meetup-about">
+  <div class="row">
+    <div class="col-sm">
+      <h2>What we are about</h2>
+      <p>Description:{{meetup.description}}</p>
+    </div>
+    <div class="col-sm ml-5">
+      <h2>Organiser</h2>
+    </div>
+    {{!-- <div class="col-sm">
+      One of three columns
+    </div> --}}
+</div>
 
-
+</div>
