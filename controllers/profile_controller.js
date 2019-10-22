@@ -11,6 +11,7 @@ const authCheck = (req,res,next)=>{
 
 
 const profilePage = (req,res)=>{
+    console.log(req)
     res.render("profiles/profile", { user:req.user} );
 }
 

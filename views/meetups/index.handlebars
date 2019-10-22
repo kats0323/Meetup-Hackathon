@@ -6,23 +6,21 @@
     </div>
     <img src="../images/Explore.png" style="width: 100vw;">
 </div>
-<div class="container-fluid mt-5 ">
+<div class="container-fluid">
     <div class="card-group">    
-        <div class="d-flex flex-row bd-highlight mx-auto"> 
-            {{#each meetups}}
-                    <div class="card ">
-                        <img src="../../upload/{{this.image}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{this.title}}</h5>
-                            <p class="card-text">{{ this.description }}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Date {{ this.date }}</small>
-                            <small class="text-muted">Start Time {{ this.startTime }}</small>
-                            <small class="text-muted">End Time {{ this.endTime }}</small>
-                        </div>
-                    </div>
-            {{/each}}
+        {{#each meetups}}
+        <div class="card">
+            <a href="/meetups/show/{{this._id}}"><img src="../../upload/{{this.image}}" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{ this.description }}</p></div>
+            <div class="card-footer">
+            <small class="text-muted">Date {{ this.date }}</small>
+            <small class="text-muted">Start Time {{ this.startTime }}</small>
+            <small class="text-muted">End Time {{ this.endTime }}</small>
+            </div>
         </div>
+        {{/each}}
     </div>
+</div>
 </div>
