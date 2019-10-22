@@ -4,7 +4,7 @@
     width: 100vw;
 }   
 .FrontCover img{
-    width: 100%;
+    width: 100vw !important;
     height: 45vh;
     opacity: 0.8;
 }
@@ -47,7 +47,7 @@
     position: absolute;
     top: 100%;
     text-align: center;
-    padding-left: 30vw;
+    padding-left: 25vw;
     width: 100vw;
     transform: translate(-50%, -50%);
     color: white;
@@ -85,7 +85,7 @@ hr{
     background-image:  url(../images/formbackground.jpeg);
 }
 .border-custom{
-    width: 500px;
+    width: 1700px !important;
     height: 70vh;
     border-left-style: solid;
     border-width: thick;
@@ -95,7 +95,7 @@ hr{
 
 .border-custom label{
     color: white;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 
 .border-custom h1{
@@ -120,3 +120,4 @@ hr{
     background-color: rgba(59, 167, 255, 0) !important;
     border: 0 !important;
 }
+/* meetups showall Page */

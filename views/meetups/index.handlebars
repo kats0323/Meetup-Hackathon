@@ -1,15 +1,28 @@
 
-{{#each meetups}}
-<div class="container">
-    </br>
-    <h1 class="text-center text-success"><span class="font-weight-bold text-center">{{ this.title }}</span></h1>
-    <div class="contents">
-    <p> {{ this.description }}</p>
-     <p> {{ this.date }}</p>
-      <p> {{ this.startTime }}</p>
-       <p> {{ this.endTime }}</p>
-        <img src="../../upload/{{ this.image }}" alt="...">
+<div>
+    <div class="title">
+        <div>Explore Meetup</div>
+        <p class="mt-4">Find events hosted by local groups where you can meet new people, try something new, or just do more of what you love.</p>
+    </div>
+    <img src="../images/Explore.png" style="width: 100vw;">
+</div>
+<div class="container-fluid mt-5">
+    <div class="card-group">    
+        <div class="d-flex flex-row bd-highlight mx-auto">
+            {{#each meetups}}
+                    <div class="card">
+                        <img src="../../upload/{{this.image}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.title}}</h5>
+                            <p class="card-text">{{ this.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-muted">Date {{ this.date }}</small>
+                            <small class="text-muted">Start Time {{ this.startTime }}</small>
+                            <small class="text-muted">End Time {{ this.endTime }}</small>
+                        </div>
+                    </div>
+            {{/each}}
+        </div>
     </div>
 </div>
-
-{{/each}}

@@ -1,6 +1,6 @@
 
 <div class="FrontCover mt-5"></div>
-    <img src="../images/Beach.png">
+    <img src="../images/Beach.png" style="width:100vw" height="500px">
     <div class="title">
         <div>The Real world is calling</div>
         <p>Join a local group to meet people, try something new, or do more of what you love.</p>
@@ -29,7 +29,7 @@
         <div class="card">
             <img src="../../upload/{{this.image}}" class="card-img-top" alt="...">
             <div class="card-body">
-            <h5 class="card-title"></h5>
+            <h5 class="card-title">{{this.title}}</h5>
             <p class="card-text">{{ this.description }}</p></div>
             <div class="card-footer">
             <small class="text-muted">Date {{ this.date }}</small>
@@ -40,23 +40,4 @@
         {{/each}}
     </div>
 </div>
-
-<<<<<<< HEAD
-=======
-
-
-{{#each meetups}}
-<div class="container">
-    </br>
-    <h1 class="text-center text-success"><span class="font-weight-bold text-center">{{ this.title }}</span></h1>
-    <div class="contents">
-    <p> {{ this.description }}</p>
-     <p> {{ this.date }}</p>
-      <p> {{ this.startTime }}</p>
-       <p> {{ this.endTime }}</p>
-
-    </div>
-</div>
-
-{{/each}}
->>>>>>> 4a4ec6f3e553f5f585ebc488088a4cd68772f1c1
+<hr>
