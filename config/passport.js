@@ -1,8 +1,12 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const mongoose = require('mongoose');
 const keys = require('./keys_dev');
+const User = require('../database/models/user_model')
 // load user model
-const User = mongoose.model('users');
+// const UserSchema = require('../database/schemas/user_schema')
+// const User = mongoose.model('users', UserSchema);
+
+// const User = mongoose.model("./database/models/user_model");
 
 
 // export the passport function
