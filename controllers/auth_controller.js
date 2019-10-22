@@ -15,6 +15,8 @@ const verify = (req, res) => {
     res.redirect('/');
   };
 
+  const usersData = 
+
   module.exports = {
       login,
       verify,

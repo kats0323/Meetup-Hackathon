@@ -24,7 +24,8 @@ const create = async (req, res) => {
     let { title, description, date,startTime ,endTime,status} = req.body;
     let meetup = await MeetupModel.create({ title, description, date,startTime ,endTime,status})
     .catch(err => res.status(500).send(err));
-    res.redirect(`/meetups/${meetup._id}`);
+    res.redirect(`/meetups/show/${meetup._id}`)
+    
 
 }
 
@@ -36,15 +37,8 @@ const show = async (req, res) => {
 }
 
 const allshow =  async (req, res) => {
-MeetupModel.find({status: 'public'})
-  .populate('user')
-  .sort({date: 'desc'})
-  .then(meetups => {
-    // res.send('STORIES');
-    res.render('meetups/index', {
-      meetups: meetups
-    });
-  });
+  let meetups = await MeetupModel.find();
+  res.render("meetups/index", { meetups });
 };
 
 
