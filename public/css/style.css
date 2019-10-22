@@ -120,4 +120,18 @@ hr{
     background-color: rgba(59, 167, 255, 0) !important;
     border: 0 !important;
 }
+/* meetups about page */
+.meetup-about h2{
+    font-size: 2.3em;
+    font-weight: bold;
+}
+.meetup-about p{
+    font-size: 1.3em;
+}
+.meet-background{
+    background-color:#fff;
+}
+.meet-pad{
+    padding-top: 20px;
+}
 /* meetups showall Page */
