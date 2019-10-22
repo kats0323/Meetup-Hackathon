@@ -12,7 +12,6 @@ router.get("/meetups/new", MeetupController.make);
 router.post("/meetups", MeetupController.create);
 router.get("/meetups/show/:id", MeetupController.show);
 
-
 module.exports = router;
 
 

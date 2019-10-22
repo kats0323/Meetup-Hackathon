@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
   googleID: {
     type: String,
-    required: true // only google auth requires required field
+    required: true 
   },
   email: {
     type: String,
@@ -21,5 +21,5 @@ const UserSchema = new Schema({
     type: String
   }
 });
-// create collection and add schema
+
 mongoose.model('users', UserSchema);
