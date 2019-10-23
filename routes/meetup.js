@@ -17,6 +17,9 @@ router.get("/meetups/show/:id", MeetupController.show);
 router.get("/", MeetupController.index);
 router.get("/meetups/allshow", MeetupController.allshow);
 router.get("/users", MeetupController.allshowUser);
+router.get("/meetups/edit/:id", MeetupController.edit);
+router.put("/meetups/:id", MeetupController.update);
+
 
 module.exports = router;
 
