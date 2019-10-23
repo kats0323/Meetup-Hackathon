@@ -1,73 +1,72 @@
-
-
-<form method="POST" action="/meetups/{{{meetup._id}}}?_method=PUT" >
-
-
-    <div>
-                    <br>   
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Title</span>
-                        </div>
-                        <input type="text" name="title">
-                    </div>
-                     
-                </div>
-                <div>
-                    <br>
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Description</span>
-                        </div>
-                        <textarea class="form-control" aria-label="With textarea " name="description"></textarea>
-                    </div>
-                    
-                </div>
-                <ul class="mt-5 list-group list-group-horizontal">
-                    <li class="list-group-item">
-                        <div class="input-group">
-                            <label>Date</label>
-                            <input type="date"  name="date" class="form-control" aria-label="Text input with segmented dropdown button">
-
-                            {{!-- <input type="date" name="date"> --}}
-                        </div>
-                    </li>
-                        <label>Start Time</label>   
-
-                    <li class="list-group-item ">
-                        <div>
-                            <input type="time"  name="startTime" class="form-control" aria-label="Text input with segmented dropdown button">
-
-                            {{!-- <input type="time" name="startTime"> --}}
-                        </div>
-                    </li>
-                        <label>End Time</label> 
-
-                    <li class="list-group-item">
-                        <div>
-
-                            <input type="time"  name="endTime" class="form-control" aria-label="Text input with segmented dropdown button">
-
-                            {{!-- <input type="time" name="endTime"> --}}
-                        </div>
-                    </li>
-
-                    <label>Images</label> 
-
-                    <li class="list-group-item">
-                        <div>
-
-                            {{!-- <input type="file"  name="image" class="form-control" aria-label="Text input with segmented dropdown button"> --}}
-
-                           <input type="file" name="image" />
-                        </div>
-                    </li>
+<div class="form-background">
+    <div class="mt-5 rounded-lg container border-custom">
+        <form method="POST" action="/meetups/{{{meetup._id}}}?_method=PUT" >
+            <h1>{{meetup.title}} edit Page </h1>
             
-                </ul>
-                    <div class="mt-5">
-                        <input class=" mt-5 mr-5 btn btn-custom float-sm-right" type="submit" value="Submit Form" />
+            <div>
+                <br>   
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Title</span>
                     </div>
-            </form>
-        </div>
+                    <input type="text" name="title" value="{{meetup.title}}">
+                </div>
+                
+            </div>
+            <div>
+                <br>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Description</span>
+                    </div>
+                    <textarea class="form-control" name="description">{{meetup.description}}</textarea>
+                </div>
+                
+            </div>
+            <ul class="mt-5 list-group list-group-horizontal">
+                <li class="list-group-item">
+                    <div class="input-group">
+                        <label>Date</label>
+                        <input type="date"  name="date" class="form-control" value="{{meetup.date}}">
+
+                        {{!-- <input type="date" name="date"> --}}
+                    </div>
+                </li>
+                    <label>Start Time</label>   
+
+                <li class="list-group-item ">
+                    <div>
+                        <input type="time"  name="startTime" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                        {{!-- <input type="time" name="startTime"> --}}
+                    </div>
+                </li>
+                    <label>End Time</label> 
+
+                <li class="list-group-item">
+                    <div>
+
+                        <input type="time"  name="endTime" class="form-control" aria-label="Text input with segmented dropdown button">
+
+                        {{!-- <input type="time" name="endTime"> --}}
+                    </div>
+                </li>
+
+                {{!-- <label>Images</label>  --}}
+
+                {{!-- <li class="list-group-item"> --}}
+                    {{!-- <div> --}}
+
+                        {{!-- <input type="file"  name="image" class="form-control" aria-label="Text input with segmented dropdown button"> --}}
+
+                    {{!-- <input type="file" name="image" /> --}}
+                    {{!-- </div> --}}
+                {{!-- </li> --}}
+
+            </ul>
+                <div class="mt-5">
+                    <input class=" mt-5 mr-5 btn btn-custom float-sm-right" type="submit" value="Submit Form" />
+                </div>
+        </form>
     </div>
 </div>

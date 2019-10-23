@@ -16,6 +16,7 @@
                 <p>EndTime:{{meetup.endTime}}</p>
                 <a href="/users/meetup.user._id">{{meetup.user.name}}</a>
             </div>
+                {{#if user._id}}<a href="/meetups/edit/{{meetup._id}}">Edit Meetup</a>{{/if}}
         </div>
         <hr>
         <div>
