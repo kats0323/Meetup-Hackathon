@@ -1,17 +1,25 @@
-<div class="container">
-<h1> Profile Page</h1>
-</br>
-<h2>Name</h2>
-
-<h3>{{user.firstName}} {{user.lastName}}</h3>
-</br>
-<h2>Email</h2>
-
-<h3>{{user.email}}</h3>
-</br>
-{{#if (user.image)}}
- <img src="{{user.image}}" alt=""/>
- {{else}}
- <img src="../../images/avatar.png" alt=""/>
- {{/if}}
+<div class="profile-background">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card text-white bg-info mb-3 mt-3" style="max-width: 30rem;">
+                <div class="card-body">
+                        <h2>Profile Picture:</h2>
+                        {{#if user.image}}
+                            <img src="{{user.image}}" alt="" width="150px" height="150px"/>
+                        {{else}}
+                            <img src="../../images/avatar.png" alt="" width="150px" height="150px "/>
+                        {{/if}}
+                </div>
+                    <h5 class="card-title">
+                        <h2>First Name : {{user.firstName}}</h2>
+                        {{#if user.lastName}}
+                            <h2>Last Name : {{user.lastName}}</h2>
+                        {{/if}}
+                        <h2>Email:{{user.email}}</h2>
+                    </h5>
+            </div>
+        </div>
+    </div>
+    </div>
 </div>

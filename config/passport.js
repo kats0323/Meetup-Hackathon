@@ -21,8 +21,8 @@ module.exports = function(passport){
        // console.log(accessToken);
        // console.log(profile);
        // use substring to end the photo at jpeg
-       const image = profile.photos[0].value.substring(0, profile.photos[0].value.indexOf('?'));
-       console.log(image);
+       const image = profile.photos[0].value;
+       console.log("Image URL is: " + image + " . Enjoy!");
        // create user with info coming from google profile
        const newUser = {
          googleID: profile.id,
@@ -31,6 +31,7 @@ module.exports = function(passport){
          email: profile.emails[0].value,
          image: image
        }
+    
        // check for existing user
        User.findOne({
          googleID: profile.id
@@ -53,7 +54,10 @@ module.exports = function(passport){
   });
 
   passport.deserializeUser((id, done) => {
-    User.findById(id).then(user => done(null, user));
+    User.findById(id).then(user => {
+      console.log("DESERIALIZE", user)
+      done(null, user)
+    });
   });
 
 }
