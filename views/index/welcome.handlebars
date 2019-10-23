@@ -1,5 +1,9 @@
-
-<div class="FrontCover mt-5"></div>
+<style>
+    .card{
+        width: 30%;
+    }
+</style>
+<div class="FrontCover mt-3"></div>
     <img src="../images/Beach.png" style="width:100vw" height="500px">
     <div class="title">
         <div>The Real world is calling</div>
@@ -24,20 +28,37 @@
 </div>
 
 <div class="container">
-    <div class="card-group">    
-        {{#each meetups}}
-        <div class="card">
-            <a href="/meetups/show/{{this._id}}"><img src="../../upload/{{this.image}}" class="card-img-top" alt="..."></a>
-            <div class="card-body">
-            <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">{{ this.description }}</p></div>
+    <h4 class="page-welcome">Events</h4>
+    <div class="row">
+        <div class="col-sm">
+            <p>See what's happening soon.</p>
+        </div>
+        <div class="col-sm"> </div>
+        <div class="col-sm">
+            <h3 class="float-right">
+                <a href="">See All</a>
+            </h3>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-between">
+    {{#each meetups}}
+
+    <div class="card">
+        <a href="/meetups/show/{{this._id}}"><img src="../../upload/{{this.image}}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+            <h3 class="card-title">{{this.title}}</h3>
+            <p class="card-text"><p class="card-text">{{this.description}}</p></p>
             <div class="card-footer">
-            <small class="text-muted">Date {{ this.date }}</small>
-            <small class="text-muted">Start Time {{ this.startTime }}</small>
-            <small class="text-muted">End Time {{ this.endTime }}</small>
+                <small class="text-muted">Date {{ this.date }}</small>
+                <small class="text-muted">Start Time {{ this.startTime }}</small>
+                <small class="text-muted">End Time {{ this.endTime }}</small>
             </div>
         </div>
-        {{/each}}
+    </div>
+    {{/each}}
+    <div>
+
+    </div>
     </div>
 </div>
 <hr>

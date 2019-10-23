@@ -1,4 +1,8 @@
-
+<style>
+    .card{
+        width: 30%;
+    }
+</style>
 <div>
     <div class="title">
         <div>Explore Meetup</div>
@@ -6,21 +10,24 @@
     </div>
     <img src="../images/Explore.png" style="width: 100vw;">
 </div>
-<div class="container-fluid">
-    <div class="card-group">    
-        {{#each meetups}}
-        <div class="card">
-            <a href="/meetups/show/{{this._id}}"><img src="../../upload/{{this.image}}" class="card-img-top" alt="..."></a>
-            <div class="card-body">
-            <h5 class="card-title">{{this.title}}</h5>
-            <p class="card-text">{{ this.description }}</p></div>
+<div class="container-fluid mt-3">
+    <div class="row d-flex justify-content-around">
+    {{#each meetups}}
+
+    <div class="card">
+        <a href="/meetups/show/{{this._id}}"><img src="../../upload/{{this.image}}" class="card-img-top" alt="..."></a>
+        <div class="card-body">
+            <h3 class="card-title">{{this.title}}</h3>
+            <p class="card-text"><p class="card-text">{{this.description}}</p></p>
             <div class="card-footer">
-            <small class="text-muted">Date {{ this.date }}</small>
-            <small class="text-muted">Start Time {{ this.startTime }}</small>
-            <small class="text-muted">End Time {{ this.endTime }}</small>
+                <small class="text-muted">Date {{ this.date }}</small>
+                <small class="text-muted">Start Time {{ this.startTime }}</small>
+                <small class="text-muted">End Time {{ this.endTime }}</small>
             </div>
         </div>
-        {{/each}}
+    </div>
+    {{/each}}
     </div>
 </div>
 </div>
+<hr>
