@@ -9,19 +9,19 @@ const MeetupSchema = new Schema({
     },
     description: {
         type: String,
-        required: true
+        // required: true
     },
     date: {
         type: Date,
-        required: true 
+        // required: true 
     },
     startTime: {
         type: String,
-        required: true 
+        // required: true 
     },
     endTime: {
         type: String,
-        required: true 
+        // required: true 
     },
     status: {
         type: String,
@@ -29,7 +29,7 @@ const MeetupSchema = new Schema({
       },
     image:{
           type: String,
-          required: true
+        //   required: true
       },
     user: {
         type: mongoose.Schema.Types.ObjectId,
