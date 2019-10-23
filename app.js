@@ -62,7 +62,12 @@ app.use(bodyParser.json())
 app.use(passport.initialize());
 app.use(passport.session());
 
-
+// Set global vars just like current_user if user logged in
+app.use((req, res, next) => {
+  console.log("USER", req.user);
+  res.locals.user = req.user || null;
+  next();
+});
 
 app.use(require("./routes/auth"));
 app.use(require("./routes/meetup"));
